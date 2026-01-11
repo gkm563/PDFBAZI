@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDFBAZI - Free & Simple PDF Tools</title>
+
+    <!-- Advanced SEO -->
+    <meta name="description"
+        content="PDFBAZI - Free online PDF tools. Merge, Split, Compress, Convert PDF to JPG, and more. Secure, private, and running entirely in your browser. No uploads required.">
+    <meta name="keywords"
+        content="pdf tools, merge pdf, split pdf, compress pdf, pdf to jpg, jpg to pdf, free pdf tools, secure pdf editor, online pdf converter">
+    <meta name="author" content="GKM">
+
+    <!-- Open Graph (Facebok, LinkedIn, etc.) -->
+    <meta property="og:title" content="PDFBAZI - Premium Free PDF Tools">
+    <meta property="og:description"
+        content="Simple, Clean, Free and for All. Secure PDF tools running entirely in your browser.">
+    <meta property="og:image" content="https://pdfbazi.com/og-image.jpg"> <!-- Placeholder for now -->
+    <meta property="og:url" content="https://pdfbazi.com">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        .hero {
+            text-align: center;
+            padding: 6rem 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Ambient glow for hero */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Filter Styles */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 20;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .filter-btn:hover {
+            border-color: #f43f5e;
+            color: #f43f5e;
+        }
+
+        .filter-btn.active {
+            background: #f43f5e;
+            border-color: #f43f5e;
+            color: white;
+            box-shadow: 0 4px 10px rgba(244, 63, 94, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            /* Fallback */
+            background: linear-gradient(135deg, var(--text-primary) 30%, #6366f1 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.04em;
+            text-shadow: 0 4px 20px rgba(99, 102, 241, 0.15);
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--primary-color);
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            box-shadow: 0 4px 15px -1px rgba(139, 92, 246, 0.15);
+            backdrop-filter: blur(5px);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            padding-bottom: 6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <ion-icon name="document-text" style="color: #f43f5e; font-size: 2rem;"></ion-icon>
+                <div class="brand-text">PDF<span>BAZI</span></div>
+            </a>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="pages/merge.html" class="nav-link">MERGE PDF</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/split.html" class="nav-link">SPLIT PDF</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/compress.html" class="nav-link">COMPRESS PDF</a>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">
+                        CONVERT PDF <ion-icon name="caret-down-outline"></ion-icon>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="pages/jpg-to-pdf.html" class="dropdown-item">JPG to PDF</a>
+                        <a href="pages/pdf-to-jpg.html" class="dropdown-item">PDF to JPG</a>
+                        <a href="pages/word-to-pdf.html" class="dropdown-item">Word to PDF</a>
+                        <a href="pages/powerpoint-to-pdf.html" class="dropdown-item">PowerPoint to PDF</a>
+                        <a href="pages/excel-to-pdf.html" class="dropdown-item">Excel to PDF</a>
+                        <a href="pages/html-to-pdf.html" class="dropdown-item">HTML to PDF</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">
+                        ALL PDF TOOLS <ion-icon name="caret-down-outline"></ion-icon>
+                    </div>
+                    <div class="dropdown-menu" style="min-width: 250px;">
+                        <a href="pages/rotate.html" class="dropdown-item">Rotate PDF</a>
+                        <a href="pages/number.html" class="dropdown-item">Page Numbers</a>
+                        <a href="pages/protect.html" class="dropdown-item">Protect PDF</a>
+                        <a href="pages/unlock.html" class="dropdown-item">Unlock PDF</a>
+                        <a href="pages/watermark.html" class="dropdown-item">Watermark PDF</a>
+                        <a href="pages/organize.html" class="dropdown-item">Organize PDF</a>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Login/Signup buttons removed as requested -->
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+
+            <h1>Simple, Clean, Free and for All</h1>
+            <p>No hidden costs, no uploads. Secure PDF tools running entirely in your browser.</p>
+        </section>
+
+        <!-- Filter Buttons -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="organize">Organize PDF</button>
+            <button class="filter-btn" data-filter="optimize">Optimize PDF</button>
+            <button class="filter-btn" data-filter="convert">Convert PDF</button>
+            <button class="filter-btn" data-filter="edit">Edit PDF</button>
+            <button class="filter-btn" data-filter="security">PDF Security</button>
+        </div>
+
+        <section class="tools-grid">
+            <!-- Merge PDF -->
+            <a href="pages/merge.html" class="card" data-category="organize">
+                <div class="card-icon">
+                    <ion-icon name="git-merge-outline"></ion-icon>
+                </div>
+                <h3>Merge PDF</h3>
+                <p>Combine multiple PDF files into one single document instantly.</p>
+            </a>
+
+            <!-- Split PDF -->
+            <a href="pages/split.html" class="card" data-category="organize">
+                <div class="card-icon">
+                    <ion-icon name="cut-outline"></ion-icon>
+                </div>
+                <h3>Split PDF</h3>
+                <p>Extract specific pages or separate your PDF into multiple files.</p>
+            </a>
+
+            <!-- Compress PDF -->
+            <a href="pages/compress.html" class="card" data-category="optimize">
+                <div class="card-icon">
+                    <ion-icon name="resize-outline"></ion-icon>
+                </div>
+                <h3>Compress PDF</h3>
+                <p>Reduce file size while keeping good quality.</p>
+            </a>
+
+            <!-- JPG to PDF -->
+            <a href="pages/jpg-to-pdf.html" class="card" data-category="convert">
+                <div class="card-icon">
+                    <ion-icon name="images-outline"></ion-icon>
+                </div>
+                <h3>JPG to PDF</h3>
+                <p>Convert images to PDF format easily.</p>
+            </a>
+
+            <!-- PDF to JPG -->
+            <a href="pages/pdf-to-jpg.html" class="card" data-category="convert">
+                <div class="card-icon">
+                    <ion-icon name="image-outline"></ion-icon>
+                </div>
+                <h3>PDF to JPG</h3>
+                <p>Extract pages from PDF as images.</p>
+            </a>
+
+            <!-- Rotate PDF -->
+            <a href="pages/rotate.html" class="card" data-category="organize edit">
+                <div class="card-icon">
+                    <ion-icon name="sync-outline"></ion-icon>
+                </div>
+                <h3>Rotate PDF</h3>
+                <p>Rotate pages in your PDF permanently.</p>
+            </a>
+
+            <!-- Page Numbers -->
+            <a href="pages/number.html" class="card" data-category="edit">
+                <div class="card-icon">
+                    <ion-icon name="list-outline"></ion-icon>
+                </div>
+                <h3>Page Numbers</h3>
+                <p>Add page numbers to your document.</p>
+            </a>
+
+            <!-- Unlock/Protect PDF -->
+            <a href="pages/protect.html" class="card" data-category="security">
+                <div class="card-icon">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                </div>
+                <h3>Protect PDF</h3>
+                <p>Add a password to secure your PDF file.</p>
+            </a>
+            <!-- Unlock PDF -->
+            <a href="pages/unlock.html" class="card" data-category="security">
+                <div class="card-icon">
+                    <ion-icon name="lock-open-outline"></ion-icon>
+                </div>
+                <h3>Unlock PDF</h3>
+                <p>Remove passwords from protected PDF files.</p>
+            </a>
+
+            <!-- Watermark PDF -->
+            <a href="pages/watermark.html" class="card" data-category="edit">
+                <div class="card-icon">
+                    <ion-icon name="water-outline"></ion-icon>
+                </div>
+                <h3>Watermark PDF</h3>
+                <p>Stamp an image or text over your PDF.</p>
+            </a>
+
+            <!-- Organize PDF -->
+            <a href="pages/organize.html" class="card" data-category="organize">
+                <div class="card-icon">
+                    <ion-icon name="grid-outline"></ion-icon>
+                </div>
+                <h3>Organize PDF</h3>
+                <p>Sort, add and delete PDF pages.</p>
+            </a>
+
+            <!-- Word to PDF -->
+            <a href="pages/word-to-pdf.html" class="card">
+                <div class="card-icon">
+                    <ion-icon name="document-outline"></ion-icon>
+                </div>
+                <h3>Word to PDF</h3>
+                <p>Convert your DOC & DOCX files to PDF.</p>
+            </a>
+
+            <!-- Excel to PDF -->
+            <a href="pages/excel-to-pdf.html" class="card">
+                <div class="card-icon">
+                    <ion-icon name="stats-chart-outline"></ion-icon>
+                </div>
+                <h3>Excel to PDF</h3>
+                <p>Convert your Excel spreadsheets to PDF.</p>
+            </a>
+
+            <!-- HTML to PDF -->
+            <a href="pages/html-to-pdf.html" class="card">
+                <div class="card-icon">
+                    <ion-icon name="logo-html5"></ion-icon>
+                </div>
+                <h3>HTML to PDF</h3>
+                <p>Convert web pages to PDF documents.</p>
+            </a>
+
+            <!-- PowerPoint to PDF (Coming Soon) -->
+            <a href="#" class="card" style="opacity: 0.9;">
+                <div class="card-icon">
+                    <ion-icon name="easel-outline"></ion-icon>
+                </div>
+                <h3>PowerPoint to PDF</h3>
+                <p>Coming Soon</p>
+            </a>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <ion-icon name="document-text" style="color: #f43f5e; font-size: 1.5rem;"></ion-icon>
+                        <div class="brand-text" style="color: white; font-size: 1.25rem;">PDF<span>BAZI</span></div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>PRODUCT</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/pricing.html">Pricing</a></li>
+                        <li><a href="pages/apps.html#desktop">PDFBAZI Desktop</a></li>
+                        <li><a href="pages/apps.html#mobile">PDFBAZI Mobile</a></li>
+                        <li><a href="pages/developers.html">Developers</a></li>
+                        <li><a href="pages/features.html">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SOLUTIONS</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/solutions.html#business">Business</a></li>
+                        <li><a href="pages/solutions.html#education">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/about.html#story">Story</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/press.html">Press</a></li>
+                        <li><a href="pages/privacy.html">Legal & Privacy</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="app-badges">
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Get it on Google Play"></a>
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                alt="Download on the App Store"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <span><ion-icon name="globe-outline" style="vertical-align: middle; margin-right: 5px;"></ion-icon>
+                        English <ion-icon name="caret-down-outline" style="vertical-align: middle;"></ion-icon></span>
+                </div>
+                <div style="color: #64748b;">
+                    © PDFBAZI 2026 ® - Your PDF Editor
+                </div>
+                <div class="social-icons">
+                    <a href="https://twitter.com/gkm563" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://facebook.com/gkm563" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://linkedin.com/in/gkm563" target="_blank"><ion-icon
+                            name="logo-linkedin"></ion-icon></a>
+                    <a href="https://instagram.com/gkm3563" target="_blank"><ion-icon
+                            name="logo-instagram"></ion-icon></a>
+                </div>
+            </div>
+
+            <p class="developer-credit" style="margin-top: 1rem; text-align: right; font-size: 0.8rem;">
+                Developer by <a href="https://linkedin.com/in/gkm563" target="_blank"
+                    style="color: var(--text-light); text-decoration: none;">GKM</a>
+            </p>
+        </div>
+    </footer>
+    <script src="js/utils.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    cards.forEach(card => {
+                        const categories = card.getAttribute('data-category');
+                        if (filter === 'all' || (categories && categories.includes(filter))) {
+                            card.style.display = 'flex';
+                            // Add animation/fade in here if desired
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

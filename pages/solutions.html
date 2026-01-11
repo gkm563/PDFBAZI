@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions | PDFBAZI - Tailored for Every Need</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/tools.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <style>
+      :root {
+        --pb-rose: #f43f5e;
+        --pb-slate-900: #0f172a;
+        --pb-slate-800: #1e293b;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif !important;
+        background-color: #f8fafc;
+        color: var(--pb-slate-900);
+        scroll-behavior: smooth;
+      }
+
+      /* Hero Animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .reveal {
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      .solutions-hero {
+        padding: 120px 20px 80px;
+        text-align: center;
+        background: radial-gradient(
+          circle at top right,
+          rgba(244, 63, 94, 0.05),
+          transparent
+        );
+      }
+
+      .section-tag {
+        color: var(--pb-rose);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      /* Solution Bento Grid */
+      .solutions-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 25px;
+        margin-bottom: 80px;
+      }
+
+      .sol-card {
+        background: white;
+        border-radius: 32px;
+        padding: 45px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+      }
+
+      .sol-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px -12px rgba(244, 63, 94, 0.12);
+        border-color: var(--pb-rose);
+      }
+
+      .col-12 {
+        grid-column: span 12;
+      }
+      .col-6 {
+        grid-column: span 6;
+      }
+
+      .sol-icon {
+        width: 55px;
+        height: 55px;
+        background: #fff1f2;
+        color: var(--pb-rose);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+      }
+
+      .sol-card h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        letter-spacing: -0.5px;
+      }
+
+      .sol-card p {
+        color: #64748b;
+        line-height: 1.7;
+        margin-bottom: 25px;
+      }
+
+      .sol-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .sol-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--pb-slate-800);
+      }
+
+      .sol-list ion-icon {
+        color: #10b981;
+        font-size: 1.2rem;
+      }
+
+      /* Industry Specific Banner */
+      .security-banner {
+        background: var(--pb-slate-900);
+        border-radius: 40px;
+        padding: 60px;
+        color: white;
+        text-align: center;
+        position: relative;
+        margin-bottom: 80px;
+      }
+
+      .security-banner h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        background: linear-gradient(to right, #fff, #94a3b8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @media (max-width: 900px) {
+        .col-6 {
+          grid-column: span 12;
+        }
+        .solutions-hero {
+          padding-top: 80px;
+        }
+        .sol-card {
+          padding: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+<nav class="navbar">
+      <div class="container nav-content">
+        <a href="../index.html" class="logo">
+          <ion-icon
+            name="document-text"
+            style="color: #f43f5e; font-size: 2rem"
+          ></ion-icon>
+          <div class="brand-text">PDF<span>BAZI</span></div>
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="merge.html" class="nav-link">MERGE PDF</a>
+          </li>
+          <li class="nav-item">
+            <a href="split.html" class="nav-link">SPLIT PDF</a>
+          </li>
+          <li class="nav-item">
+            <a href="compress.html" class="nav-link">COMPRESS PDF</a>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">
+              CONVERT PDF <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="dropdown-menu">
+              <a href="jpg-to-pdf.html" class="dropdown-item">JPG to PDF</a>
+              <a href="pdf-to-jpg.html" class="dropdown-item">PDF to JPG</a>
+              <a href="word-to-pdf.html" class="dropdown-item">Word to PDF</a>
+              <a href="powerpoint-to-pdf.html" class="dropdown-item"
+                >PowerPoint to PDF</a
+              >
+              <a href="excel-to-pdf.html" class="dropdown-item">Excel to PDF</a>
+              <a href="html-to-pdf.html" class="dropdown-item">HTML to PDF</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">
+              ALL PDF TOOLS <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="dropdown-menu" style="min-width: 250px">
+              <a href="rotate.html" class="dropdown-item">Rotate PDF</a>
+              <a href="number.html" class="dropdown-item">Page Numbers</a>
+              <a href="protect.html" class="dropdown-item">Protect PDF</a>
+              <a href="unlock.html" class="dropdown-item">Unlock PDF</a>
+              <a href="watermark.html" class="dropdown-item">Watermark PDF</a>
+              <a href="organize.html" class="dropdown-item">Organize PDF</a>
+            </div>
+          </li>
+        </ul>
+
+         
+      </div>
+    </nav>
+    <header class="solutions-hero reveal">
+      <div class="container">
+        <span class="section-tag">Use Cases</span>
+        <h1
+          style="
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.1;
+          "
+        >
+          Solutions for every <br />
+          workflow.
+        </h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="solutions-grid">
+        <div class="sol-card col-6 reveal" style="animation-delay: 0.1s">
+          <div class="sol-icon">
+            <ion-icon name="business-outline"></ion-icon>
+          </div>
+          <h2>Enterprise & Business</h2>
+          <p>
+            Cut down on heavy SaaS subscriptions. PDFBAZI provides the same
+            professional-grade tools for free, with an emphasis on corporate
+            privacy.
+          </p>
+          <ul class="sol-list">
+            <li>
+              <ion-icon name="checkmark-done-circle"></ion-icon> Zero Recurring
+              License Costs
+            </li>
+            <li>
+              <ion-icon name="checkmark-done-circle"></ion-icon> HIPAA & GDPR
+              Compliant Logic
+            </li>
+            <li>
+              <ion-icon name="checkmark-done-circle"></ion-icon> Fast Offline
+              Processing
+            </li>
+          </ul>
+        </div>
+
+        <div class="sol-card col-6 reveal" style="animation-delay: 0.2s">
+          <div class="sol-icon">
+            <ion-icon name="school-outline"></ion-icon>
+          </div>
+          <h2>Students & Educators</h2>
+          <p>
+            Academic life is hard enough. Managing assignments shouldn't be.
+            Merge your thesis, compress scanned notes, and organize your study
+            material in seconds.
+          </p>
+          <ul class="sol-list">
+            <li>
+              <ion-icon name="checkmark-done-circle"></ion-icon> Free for
+              Lifelong Learning
+            </li>
+            <li>
+              <ion-icon name="checkmark-done-circle"></ion-icon> Mobile
+              Optimized for Quick Fixes
+            </li>
+            <li>
+              <ion-icon name="checkmark-done-circle"></ion-icon> No Sign-up
+              Required
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="sol-card col-12 reveal"
+          style="
+            animation-delay: 0.3s;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+          "
+        >
+          <div style="flex: 1; min-width: 300px">
+            <div class="sol-icon">
+              <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <h2>For Developers</h2>
+            <p>
+              Build on top of the PDFBAZI philosophy. We are open to
+              collaborations for custom client-side PDF implementations. Use our
+              WebAssembly-powered logic for your own lightweight projects.
+            </p>
+            <a
+              href="developers.html"
+              style="
+                color: var(--pb-rose);
+                font-weight: 700;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+              "
+            >
+              Meet the Architect
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+          <div
+            style="
+              flex: 1;
+              min-width: 300px;
+              background: #f1f5f9;
+              padding: 30px;
+              border-radius: 20px;
+            "
+          >
+            <code style="color: #0f172a; font-size: 0.9rem">
+              // Logic for Privacy-First PDF<br />
+              async function processLocally(file) {<br />
+              &nbsp;&nbsp;const reader = new FileReader();<br />
+              &nbsp;&nbsp;// No server upload, pure WASM<br />
+              &nbsp;&nbsp;return await pdfEngine.compress(file);<br />
+              }
+            </code>
+          </div>
+        </div>
+      </div>
+
+      <div class="security-banner reveal" style="animation-delay: 0.4s">
+        <span class="section-tag" style="color: var(--pb-rose)"
+          >Security Standard</span
+        >
+        <h2>Zero-Server. Zero-Logs. Zero-Risk.</h2>
+        <p style="color: #94a3b8; max-width: 600px; margin: 0 auto 30px">
+          Every document you process stays within your browser. We don't just
+          say we're private; our architecture makes data breaches impossible.
+        </p>
+        <a
+          href="privacy.html"
+          class="btn"
+          style="
+            background: white;
+            color: black;
+            padding: 15px 35px;
+            border-radius: 12px;
+            font-weight: 700;
+          "
+          >Learn about Security</a
+        >
+      </div>
+    </main>
+<footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <ion-icon name="document-text" style="color: #f43f5e; font-size: 1.5rem;"></ion-icon>
+                        <div class="brand-text" style="color: white; font-size: 1.25rem;">PDF<span>BAZI</span></div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>PRODUCT</h4>
+                    <ul class="footer-links">
+                        <li><a href=  " pricing.html">Pricing</a></li>
+                        <li><a href=" apps.html#desktop">PDFBAZI Desktop</a></li>
+                        <li><a href=" apps.html#mobile">PDFBAZI Mobile</a></li>
+                        <li><a href=" developers.html">Developers</a></li>
+                        <li><a href=" features.html">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SOLUTIONS</h4>
+                    <ul class="footer-links">
+                        <li><a href="solutions.html#business">Business</a></li>
+                        <li><a href="solutions.html#education">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <ul class="footer-links">
+                        <li><a href=" about.html">About Us</a></li>
+                        <li><a href=" about.html#story">Story</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="press.html">Press</a></li>
+                        <li><a href="privacy.html">Legal & Privacy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="app-badges">
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Get it on Google Play"></a>
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                alt="Download on the App Store"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <span><ion-icon name="globe-outline" style="vertical-align: middle; margin-right: 5px;"></ion-icon>
+                        English <ion-icon name="caret-down-outline" style="vertical-align: middle;"></ion-icon></span>
+                </div>
+                <div>
+                    © PDFBAZI 2026 ® - Your PDF Editor
+                </div>
+                <div class="social-icons">
+                    <a href="https://twitter.com/gkm563" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://facebook.com/gkm563" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://linkedin.com/in/gkm563" target="_blank"><ion-icon
+                            name="logo-linkedin"></ion-icon></a>
+                    <a href="https://instagram.com/gkm3563" target="_blank"><ion-icon
+                            name="logo-instagram"></ion-icon></a>
+                </div>
+            </div>
+
+            <p class="developer-credit" style="margin-top: 1rem; text-align: right; font-size: 0.8rem;">
+                Developer by <a href="https://linkedin.com/in/gkm563" target="_blank"
+                    style="color: var(--text-light); text-decoration: none;">GKM</a>
+            </p>
+        </div>
+    </footer>
+  </body>
+</html>

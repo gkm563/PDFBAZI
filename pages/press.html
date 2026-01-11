@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | PDFBAZI - Insights, Updates & Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tools.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        :root {
+            --primary: #f43f5e;
+            --slate-900: #0f172a;
+            --slate-600: #475569;
+            --slate-100: #f1f5f9;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            background-color: #f8fafc;
+            color: var(--slate-900);
+            line-height: 1.6;
+        }
+
+        .blog-hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at top right, rgba(244, 63, 94, 0.05), transparent 70%);
+        }
+
+        .blog-hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 1rem;
+        }
+
+        .blog-hero p {
+            font-size: 1.25rem;
+            color: var(--slate-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0 8rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 24px;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 25px 50px -12px rgba(244, 63, 94, 0.1);
+        }
+
+        .tag-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background: #fff1f2;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: var(--slate-400);
+        }
+
+        .blog-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-card p {
+            color: var(--slate-600);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .read-more {
+            margin-top: auto;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s;
+        }
+
+        .blog-card:hover .read-more {
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero { padding-top: 80px; }
+            .blog-card { padding: 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+      <div class="container nav-content">
+        <a href="../index.html" class="logo">
+          <ion-icon
+            name="document-text"
+            style="color: #f43f5e; font-size: 2rem"
+          ></ion-icon>
+          <div class="brand-text">PDF<span>BAZI</span></div>
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="merge.html" class="nav-link">MERGE PDF</a>
+          </li>
+          <li class="nav-item">
+            <a href="split.html" class="nav-link">SPLIT PDF</a>
+          </li>
+          <li class="nav-item">
+            <a href="compress.html" class="nav-link">COMPRESS PDF</a>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">
+              CONVERT PDF <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="dropdown-menu">
+              <a href="jpg-to-pdf.html" class="dropdown-item">JPG to PDF</a>
+              <a href="pdf-to-jpg.html" class="dropdown-item">PDF to JPG</a>
+              <a href="word-to-pdf.html" class="dropdown-item">Word to PDF</a>
+              <a href="powerpoint-to-pdf.html" class="dropdown-item"
+                >PowerPoint to PDF</a
+              >
+              <a href="excel-to-pdf.html" class="dropdown-item">Excel to PDF</a>
+              <a href="html-to-pdf.html" class="dropdown-item">HTML to PDF</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">
+              ALL PDF TOOLS <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="dropdown-menu" style="min-width: 250px">
+              <a href="rotate.html" class="dropdown-item">Rotate PDF</a>
+              <a href="number.html" class="dropdown-item">Page Numbers</a>
+              <a href="protect.html" class="dropdown-item">Protect PDF</a>
+              <a href="unlock.html" class="dropdown-item">Unlock PDF</a>
+              <a href="watermark.html" class="dropdown-item">Watermark PDF</a>
+              <a href="organize.html" class="dropdown-item">Organize PDF</a>
+            </div>
+          </li>
+        </ul>
+
+         
+      </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="container">
+            <h1>Journal & Updates</h1>
+            <p>Exploring the intersection of privacy, web engineering, and document productivity.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="blog-grid">
+            <article class="blog-card" onclick="window.location.href='#';">
+                <div class="tag-row">
+                    <span class="tag">Release</span>
+                    <span class="date">January 11, 2026</span>
+                </div>
+                <h2>Project PDFBAZI: The Launch of a Privacy-First Suite</h2>
+                <p>PDFBAZI is officially live. Built on a simple principle: build a tool that solves real-world problems without the bloat, subscriptions, or invasive ads.</p>
+                <a href="#" class="read-more">Read Full Article <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='#';">
+                <div class="tag-row">
+                    <span class="tag">Security</span>
+                    <span class="date">January 15, 2026</span>
+                </div>
+                <h2>Why Client-Side Processing is the New Standard</h2>
+                <p>Most PDF tools upload your sensitive files to hidden servers. Learn how we use WebAssembly to process everything directly in your browser.</p>
+                <a href="#" class="read-more">Read Full Article <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='#';">
+                <div class="tag-row">
+                    <span class="tag">Productivity</span>
+                    <span class="date">January 20, 2026</span>
+                </div>
+                <h2>5 Ways to Optimize Your Digital Workflow</h2>
+                <p>From batch merging to smart compression, discover how to handle your document management efficiently and securely.</p>
+                <a href="#" class="read-more">Read Full Article <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </article>
+        </div>
+    </main>
+
+   <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <ion-icon name="document-text" style="color: #f43f5e; font-size: 1.5rem;"></ion-icon>
+                        <div class="brand-text" style="color: white; font-size: 1.25rem;">PDF<span>BAZI</span></div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>PRODUCT</h4>
+                    <ul class="footer-links">
+                        <li><a href=  " pricing.html">Pricing</a></li>
+                        <li><a href=" apps.html#desktop">PDFBAZI Desktop</a></li>
+                        <li><a href=" apps.html#mobile">PDFBAZI Mobile</a></li>
+                        <li><a href=" developers.html">Developers</a></li>
+                        <li><a href=" features.html">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SOLUTIONS</h4>
+                    <ul class="footer-links">
+                        <li><a href="solutions.html#business">Business</a></li>
+                        <li><a href="solutions.html#education">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <ul class="footer-links">
+                        <li><a href=" about.html">About Us</a></li>
+                        <li><a href=" about.html#story">Story</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="press.html">Press</a></li>
+                        <li><a href="privacy.html">Legal & Privacy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="app-badges">
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Get it on Google Play"></a>
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                alt="Download on the App Store"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <span><ion-icon name="globe-outline" style="vertical-align: middle; margin-right: 5px;"></ion-icon>
+                        English <ion-icon name="caret-down-outline" style="vertical-align: middle;"></ion-icon></span>
+                </div>
+                <div>
+                    © PDFBAZI 2026 ® - Your PDF Editor
+                </div>
+                <div class="social-icons">
+                    <a href="https://twitter.com/gkm563" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://facebook.com/gkm563" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://linkedin.com/in/gkm563" target="_blank"><ion-icon
+                            name="logo-linkedin"></ion-icon></a>
+                    <a href="https://instagram.com/gkm3563" target="_blank"><ion-icon
+                            name="logo-instagram"></ion-icon></a>
+                </div>
+            </div>
+
+            <p class="developer-credit" style="margin-top: 1rem; text-align: right; font-size: 0.8rem;">
+                Developer by <a href="https://linkedin.com/in/gkm563" target="_blank"
+                    style="color: var(--text-light); text-decoration: none;">GKM</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

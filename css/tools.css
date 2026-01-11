@@ -1,0 +1,401 @@
+/* Tool Specific Styles - Premium Upgrade */
+
+.tool-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.tool-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    /* Fallback */
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.tool-header p {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* Workspace Layout */
+.workspace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    min-height: 60vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Upload Container */
+.upload-container {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 3px dashed var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 4rem 2rem;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.upload-container:hover,
+.upload-container.drag-active {
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-glow);
+}
+
+.upload-container .icon {
+    font-size: 4.5rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.upload-container:hover .icon {
+    color: var(--primary-color);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.upload-container h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.upload-container p {
+    color: #475569;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* File List */
+.file-list {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    gap: 1rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.file-item {
+    background: var(--bg-card);
+    backdrop-filter: blur(8px);
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border-card);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.file-item:hover {
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex: 1;
+}
+
+.file-icon {
+    font-size: 2rem;
+    color: var(--danger);
+    background: rgba(244, 63, 94, 0.1);
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+}
+
+.file-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    word-break: break-all;
+}
+
+.file-size {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+    opacity: 0.6;
+}
+
+.remove-btn:hover {
+    background: rgba(244, 63, 94, 0.1);
+    color: var(--danger);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Options Panel */
+.options-panel {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 800px;
+    display: none;
+    border: 1px solid var(--border-card);
+    animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.options-panel.active {
+    display: block;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+select {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+    background: white;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.2s;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+    background: white;
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    display: none;
+    padding: 3rem;
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    max-width: 600px;
+    width: 100%;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: var(--success);
+    margin-bottom: 1.5rem;
+    animation: successPulse 2s infinite;
+    filter: drop-shadow(0 4px 10px rgba(16, 185, 129, 0.2));
+}
+
+@keyframes successPulse {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0 rgba(16, 185, 129, 0));
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 25px rgba(16, 185, 129, 0.4));
+    }
+
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0 rgba(16, 185, 129, 0));
+    }
+}
+
+.success-message h2 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.success-message p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Mobile Adjustments for Tools */
+@media (max-width: 768px) {
+    .tool-header {
+        margin-bottom: 2rem;
+    }
+
+    .tool-header h1 {
+        font-size: 2rem;
+    }
+
+    .tool-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .upload-container {
+        padding: 2rem 1rem;
+        border-width: 2px;
+    }
+
+    .upload-container .icon {
+        font-size: 3.5rem;
+    }
+
+    .upload-container h3 {
+        font-size: 1.5rem;
+    }
+
+    /* File List Items */
+    .file-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .file-info {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .file-name {
+        font-size: 0.95rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .remove-btn {
+        width: 100%;
+        background: #fee2e2;
+        color: var(--danger);
+        padding: 0.75rem;
+        border-radius: var(--radius-sm);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+    }
+
+    /* Options Panel */
+    .options-panel {
+        padding: 1.5rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .controls .btn,
+    .controls select,
+    .controls input {
+        width: 100%;
+        max-width: 100%;
+    }
+}

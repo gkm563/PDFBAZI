@@ -1,0 +1,15 @@
+{
+  "name": "pdfbazi",
+  "version": "1.0.0",
+  "description": "**PDFBAZI** is a comprehensive, client-side web application for manipulating PDF documents. Built with HTML5, CSS3, and Vanilla JavaScript, it offers a secure and fast way to manage PDFs directly in the browser without uploading files to a server.",
+  "main": "generate_tests.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}

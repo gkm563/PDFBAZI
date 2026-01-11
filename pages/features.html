@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Features - PDFBAZI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/tools.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <style>
+      :root {
+        --primary: #f43f5e;
+        --slate-900: #0f172a;
+        --slate-600: #475569;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif !important;
+        background: #ffffff;
+        color: var(--slate-900);
+      }
+
+      /* Entrance Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .reveal {
+        animation: fadeInUp 0.8s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+      }
+
+      .features-hero {
+        padding: 100px 20px 60px;
+        text-align: center;
+        background: radial-gradient(
+          circle at top right,
+          rgba(244, 63, 94, 0.05),
+          transparent
+        );
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin: 40px 0 80px;
+      }
+
+      .feature-card {
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 28px;
+        padding: 40px;
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--primary);
+        box-shadow: 0 20px 40px rgba(244, 63, 94, 0.08);
+      }
+
+      .icon-box {
+        width: 60px;
+        height: 60px;
+        background: #fff1f2;
+        color: var(--primary);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin-bottom: 24px;
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .feature-card p {
+        color: var(--slate-600);
+        line-height: 1.6;
+      }
+
+      .highlight-bar {
+        background: var(--slate-900);
+        color: white;
+        padding: 60px;
+        border-radius: 40px;
+        text-align: center;
+        margin-bottom: 80px;
+      }
+
+      .badge {
+        background: var(--primary);
+        color: white;
+        padding: 6px 16px;
+        border-radius: 100px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      @media (max-width: 768px) {
+        .features-hero {
+          padding-top: 80px;
+        }
+        .feature-card {
+          padding: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container nav-content">
+        <a href="../index.html" class="logo">
+          <ion-icon
+            name="document-text"
+            style="color: #f43f5e; font-size: 2rem"
+          ></ion-icon>
+          <div class="brand-text">PDF<span>BAZI</span></div>
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="merge.html" class="nav-link">MERGE PDF</a>
+          </li>
+          <li class="nav-item">
+            <a href="split.html" class="nav-link">SPLIT PDF</a>
+          </li>
+          <li class="nav-item">
+            <a href="compress.html" class="nav-link">COMPRESS PDF</a>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">
+              CONVERT PDF <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="dropdown-menu">
+              <a href="jpg-to-pdf.html" class="dropdown-item">JPG to PDF</a>
+              <a href="pdf-to-jpg.html" class="dropdown-item">PDF to JPG</a>
+              <a href="word-to-pdf.html" class="dropdown-item">Word to PDF</a>
+              <a href="powerpoint-to-pdf.html" class="dropdown-item"
+                >PowerPoint to PDF</a
+              >
+              <a href="excel-to-pdf.html" class="dropdown-item">Excel to PDF</a>
+              <a href="html-to-pdf.html" class="dropdown-item">HTML to PDF</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">
+              ALL PDF TOOLS <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="dropdown-menu" style="min-width: 250px">
+              <a href="rotate.html" class="dropdown-item">Rotate PDF</a>
+              <a href="number.html" class="dropdown-item">Page Numbers</a>
+              <a href="protect.html" class="dropdown-item">Protect PDF</a>
+              <a href="unlock.html" class="dropdown-item">Unlock PDF</a>
+              <a href="watermark.html" class="dropdown-item">Watermark PDF</a>
+              <a href="organize.html" class="dropdown-item">Organize PDF</a>
+            </div>
+          </li>
+        </ul>
+
+         
+      </div>
+    </nav>
+
+    <header class="features-hero reveal">
+      <div class="container">
+        <span class="badge">Platform Capabilities</span>
+        <h1
+          style="
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+          "
+        >
+          Everything you need to <br />
+          manage PDFs like a pro.
+        </h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="features-grid">
+        <div class="feature-card reveal" style="animation-delay: 0.1s">
+          <div class="icon-box">
+            <ion-icon name="hammer-outline"></ion-icon>
+          </div>
+          <h3>Power Utilities</h3>
+          <p>
+            Merge multiple files, split documents into separate pages, or
+            compress heavy PDFs to save space without losing quality.
+          </p>
+        </div>
+
+        <div class="feature-card reveal" style="animation-delay: 0.2s">
+          <div class="icon-box">
+            <ion-icon name="swap-horizontal-outline"></ion-icon>
+          </div>
+          <h3>Pro Conversion</h3>
+          <p>
+            Seamlessly convert Word, Excel, PowerPoint, and HTML to PDF.
+            High-fidelity conversion that preserves your original layout.
+          </p>
+        </div>
+
+        <div class="feature-card reveal" style="animation-delay: 0.3s">
+          <div class="icon-box">
+            <ion-icon name="shield-lock-outline"></ion-icon>
+          </div>
+          <h3>Military-Grade Security</h3>
+          <p>
+            Protect your sensitive data with AES encryption passwords or unlock
+            protected files for editing in seconds.
+          </p>
+        </div>
+
+        <div class="feature-card reveal" style="animation-delay: 0.4s">
+          <div class="icon-box"><ion-icon name="grid-outline"></ion-icon></div>
+          <h3>Page Management</h3>
+          <p>
+            Organize, rotate, reorder, or delete pages with a simple
+            drag-and-drop interface. Total control over document structure.
+          </p>
+        </div>
+
+        <div class="feature-card reveal" style="animation-delay: 0.5s">
+          <div class="icon-box">
+            <ion-icon name="color-filter-outline"></ion-icon>
+          </div>
+          <h3>Visual Branding</h3>
+          <p>
+            Add custom text or image watermarks to your documents to prevent
+            unauthorized use and maintain your brand identity.
+          </p>
+        </div>
+
+        <div class="feature-card reveal" style="animation-delay: 0.6s">
+          <div class="icon-box"><ion-icon name="image-outline"></ion-icon></div>
+          <h3>Image to PDF</h3>
+          <p>
+            Batch convert JPG, PNG, and TIFF images into high-quality PDF
+            documents with customizable page margins and orientation.
+          </p>
+        </div>
+      </div>
+
+      <div class="highlight-bar reveal" style="animation-delay: 0.7s">
+        <h2 style="color: #006aff; font-size: 2.2rem; margin-bottom: 15px">
+          Privacy is our Foundation
+        </h2>
+        <p
+          style="
+            color: #94a3b8;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+          "
+        >
+          Unlike other platforms, PDFBAZI is built on
+          <b>Client-Side Architecture</b>. Your files never touch our
+          servers—everything happens inside your browser.
+        </p>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+          "
+        >
+          <span
+            style="
+              background: rgba(255, 255, 255, 0.05);
+              padding: 10px 20px;
+              border-radius: 12px;
+              font-weight: 600;
+            "
+            >100% Free</span
+          >
+          <span
+            style="
+              background: rgba(255, 255, 255, 0.05);
+              padding: 10px 20px;
+              border-radius: 12px;
+              font-weight: 600;
+            "
+            >No Ads</span
+          >
+          <span
+            style="
+              background: rgba(255, 255, 255, 0.05);
+              padding: 10px 20px;
+              border-radius: 12px;
+              font-weight: 600;
+            "
+            >No Uploads</span
+          >
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 100px">
+        <a
+          href="../index.html"
+          class="btn btn-primary"
+          style="padding: 18px 45px; font-size: 1.1rem; border-radius: 16px"
+        >
+          Get Started for Free
+          <ion-icon
+            name="arrow-forward-outline"
+            style="vertical-align: middle; margin-left: 8px"
+          ></ion-icon>
+        </a>
+      </div>
+    </main>
+
+   <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <ion-icon name="document-text" style="color: #f43f5e; font-size: 1.5rem;"></ion-icon>
+                        <div class="brand-text" style="color: white; font-size: 1.25rem;">PDF<span>BAZI</span></div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>PRODUCT</h4>
+                    <ul class="footer-links">
+                        <li><a href=  " pricing.html">Pricing</a></li>
+                        <li><a href=" apps.html#desktop">PDFBAZI Desktop</a></li>
+                        <li><a href=" apps.html#mobile">PDFBAZI Mobile</a></li>
+                        <li><a href=" developers.html">Developers</a></li>
+                        <li><a href=" features.html">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SOLUTIONS</h4>
+                    <ul class="footer-links">
+                        <li><a href="solutions.html#business">Business</a></li>
+                        <li><a href="solutions.html#education">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <ul class="footer-links">
+                        <li><a href=" about.html">About Us</a></li>
+                        <li><a href=" about.html#story">Story</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="press.html">Press</a></li>
+                        <li><a href="privacy.html">Legal & Privacy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="app-badges">
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Get it on Google Play"></a>
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                alt="Download on the App Store"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <span><ion-icon name="globe-outline" style="vertical-align: middle; margin-right: 5px;"></ion-icon>
+                        English <ion-icon name="caret-down-outline" style="vertical-align: middle;"></ion-icon></span>
+                </div>
+                <div>
+                    © PDFBAZI 2026 ® - Your PDF Editor
+                </div>
+                <div class="social-icons">
+                    <a href="https://twitter.com/gkm563" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://facebook.com/gkm563" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://linkedin.com/in/gkm563" target="_blank"><ion-icon
+                            name="logo-linkedin"></ion-icon></a>
+                    <a href="https://instagram.com/gkm3563" target="_blank"><ion-icon
+                            name="logo-instagram"></ion-icon></a>
+                </div>
+            </div>
+
+            <p class="developer-credit" style="margin-top: 1rem; text-align: right; font-size: 0.8rem;">
+                Developer by <a href="https://linkedin.com/in/gkm563" target="_blank"
+                    style="color: var(--text-light); text-decoration: none;">GKM</a>
+            </p>
+        </div>
+    </footer>
+  </body>
+</html>

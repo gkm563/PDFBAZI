@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | PDFBAZI - Support & Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tools.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <style>
+        :root {
+            --primary-rose: #f43f5e;
+            --slate-900: #0f172a;
+            --slate-700: #334155;
+            --slate-500: #64748b;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            background-color: #f8fafc;
+            color: var(--slate-900);
+            overflow-x: hidden;
+        }
+
+        /* Entrance Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-reveal { animation: fadeInUp 0.8s cubic-bezier(0.2, 1, 0.3, 1) forwards; }
+
+        .contact-hero {
+            padding: 120px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at top right, rgba(244, 63, 94, 0.05), transparent 70%);
+        }
+
+        .contact-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 15px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+
+        /* Contact Method Cards */
+        .info-card {
+            grid-column: span 4;
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-rose);
+            box-shadow: 0 20px 40px rgba(244, 63, 94, 0.05);
+        }
+
+        .icon-box {
+            width: 55px;
+            height: 55px;
+            background: #fff1f2;
+            color: var(--primary-rose);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        /* Modern Form Styles */
+        .form-section {
+            grid-column: span 12;
+            background: white;
+            border-radius: 40px;
+            padding: 60px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--slate-700);
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 14px;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus, .input-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-rose);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(244, 63, 94, 0.1);
+        }
+
+        .btn-send {
+            background: var(--primary-rose);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 16px;
+            font-weight: 800;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(244, 63, 94, 0.2);
+        }
+
+        .btn-send:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(244, 63, 94, 0.3);
+        }
+
+        @media (max-width: 900px) {
+            .info-card { grid-column: span 12; }
+            .form-section { padding: 40px 20px; }
+            .contact-hero { padding-top: 100px; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+      <div class="container nav-content">
+        <a href="../index.html" class="logo">
+          <ion-icon
+            name="document-text"
+            style="color: #f43f5e; font-size: 2rem"
+          ></ion-icon>
+          <div class="brand-text">PDF<span>BAZI</span></div>
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="merge.html" class="nav-link">MERGE PDF</a>
+          </li>
+          <li class="nav-item">
+            <a href="split.html" class="nav-link">SPLIT PDF</a>
+          </li>
+          <li class="nav-item">
+            <a href="compress.html" class="nav-link">COMPRESS PDF</a>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">
+              CONVERT PDF <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="dropdown-menu">
+              <a href="jpg-to-pdf.html" class="dropdown-item">JPG to PDF</a>
+              <a href="pdf-to-jpg.html" class="dropdown-item">PDF to JPG</a>
+              <a href="word-to-pdf.html" class="dropdown-item">Word to PDF</a>
+              <a href="powerpoint-to-pdf.html" class="dropdown-item"
+                >PowerPoint to PDF</a
+              >
+              <a href="excel-to-pdf.html" class="dropdown-item">Excel to PDF</a>
+              <a href="html-to-pdf.html" class="dropdown-item">HTML to PDF</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">
+              ALL PDF TOOLS <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="dropdown-menu" style="min-width: 250px">
+              <a href="rotate.html" class="dropdown-item">Rotate PDF</a>
+              <a href="number.html" class="dropdown-item">Page Numbers</a>
+              <a href="protect.html" class="dropdown-item">Protect PDF</a>
+              <a href="unlock.html" class="dropdown-item">Unlock PDF</a>
+              <a href="watermark.html" class="dropdown-item">Watermark PDF</a>
+              <a href="organize.html" class="dropdown-item">Organize PDF</a>
+            </div>
+          </li>
+        </ul>
+
+         
+      </div>
+    </nav>
+
+    <header class="contact-hero animate-reveal">
+        <div class="container">
+            <h1 style="line-height: 1.1;">Let's get in touch.</h1>
+            <p style="color: var(--slate-500); font-size: 1.25rem; max-width: 600px; margin: 0 auto;">
+                Have a feature request, found a bug, or just want to say hi? We're here to help.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="contact-grid">
+            <div class="info-card animate-reveal" style="animation-delay: 0.1s;">
+                <div class="icon-box"><ion-icon name="mail-unread-outline"></ion-icon></div>
+                <h3 style="margin-bottom: 10px;">Email Us</h3>
+                <p style="color: var(--slate-500); margin-bottom: 15px;">Official support for all PDFBAZI users.</p>
+                <a href="mailto:support@pdfbazi.com" style="color: var(--primary-rose); font-weight: 700; text-decoration: none;">support@pdfbazi.com</a>
+            </div>
+
+            <div class="info-card animate-reveal" style="animation-delay: 0.2s;">
+                <div class="icon-box"><ion-icon name="logo-twitter"></ion-icon></div>
+                <h3 style="margin-bottom: 10px;">Social Support</h3>
+                <p style="color: var(--slate-500); margin-bottom: 15px;">Get quick updates and community news.</p>
+                <a href="https://twitter.com/gkm563" target="_blank" style="color: var(--primary-rose); font-weight: 700; text-decoration: none;">@gkm563</a>
+            </div>
+
+            <div class="info-card animate-reveal" style="animation-delay: 0.3s;">
+                <div class="icon-box"><ion-icon name="chatbubbles-outline"></ion-icon></div>
+                <h3 style="margin-bottom: 10px;">Developer</h3>
+                <p style="color: var(--slate-500); margin-bottom: 15px;">Direct query for collaboration or hiring.</p>
+                <a href="mailto:contact@gkm563.com" style="color: var(--primary-rose); font-weight: 700; text-decoration: none;">contact@gkm563.com</a>
+            </div>
+
+            <div class="form-section animate-reveal" style="animation-delay: 0.4s;">
+                <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 30px;">Send a direct message</h2>
+                <form action="#">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Gautam Maurya" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Feature Request / Feedback" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea rows="6" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-send">
+                        Send Message <ion-icon name="paper-plane-outline"></ion-icon>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <ion-icon name="document-text" style="color: #f43f5e; font-size: 1.5rem;"></ion-icon>
+                        <div class="brand-text" style="color: white; font-size: 1.25rem;">PDF<span>BAZI</span></div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>PRODUCT</h4>
+                    <ul class="footer-links">
+                        <li><a href=  " pricing.html">Pricing</a></li>
+                        <li><a href=" apps.html#desktop">PDFBAZI Desktop</a></li>
+                        <li><a href=" apps.html#mobile">PDFBAZI Mobile</a></li>
+                        <li><a href=" developers.html">Developers</a></li>
+                        <li><a href=" features.html">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SOLUTIONS</h4>
+                    <ul class="footer-links">
+                        <li><a href="solutions.html#business">Business</a></li>
+                        <li><a href="solutions.html#education">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <ul class="footer-links">
+                        <li><a href=" about.html">About Us</a></li>
+                        <li><a href=" about.html#story">Story</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="press.html">Press</a></li>
+                        <li><a href="privacy.html">Legal & Privacy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="app-badges">
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Get it on Google Play"></a>
+                        <a href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                alt="Download on the App Store"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <span><ion-icon name="globe-outline" style="vertical-align: middle; margin-right: 5px;"></ion-icon>
+                        English <ion-icon name="caret-down-outline" style="vertical-align: middle;"></ion-icon></span>
+                </div>
+                <div>
+                    © PDFBAZI 2026 ® - Your PDF Editor
+                </div>
+                <div class="social-icons">
+                    <a href="https://twitter.com/gkm563" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://facebook.com/gkm563" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://linkedin.com/in/gkm563" target="_blank"><ion-icon
+                            name="logo-linkedin"></ion-icon></a>
+                    <a href="https://instagram.com/gkm3563" target="_blank"><ion-icon
+                            name="logo-instagram"></ion-icon></a>
+                </div>
+            </div>
+
+            <p class="developer-credit" style="margin-top: 1rem; text-align: right; font-size: 0.8rem;">
+                Developer by <a href="https://linkedin.com/in/gkm563" target="_blank"
+                    style="color: var(--text-light); text-decoration: none;">GKM</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
