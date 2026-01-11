@@ -1,48 +1,74 @@
-# PDFBAZI - Modern PDF Tool Suite
+# 🚀 PDFBAZI – Modern PDF Tool Suite (2026)
 
-**PDFBAZI** is a comprehensive, client-side web application for manipulating PDF documents. Built with HTML5, CSS3, and Vanilla JavaScript, it offers a secure and fast way to manage PDFs directly in the browser without uploading files to a server.
+**PDFBAZI** is a modern, fast, and privacy-focused **PDF tool web application** built completely on the **client side** using HTML5, CSS3, and Vanilla JavaScript.  
+It allows users to **merge, split, compress, convert, and secure PDF files directly in the browser** — no uploads, no backend, and complete privacy.
+
+> 🏁 **This is my first major project of 2026**, built with a strong focus on real-world usability, clean UI, smooth animations, and performance.
+
+---
+
+## 🌐 Live Demo
+
+- 🔗 **Production (Netlify)**: https://pdfbazi.net  
+- 🔗 **GitHub Pages**: https://gkm563.github.io/PDFBAZI/
+
+---
+
+## ✨ Key Highlights
+
+- ✅ Fully **Client-Side PDF Tools**
+- ✅ **No File Uploads** – Privacy First
+- ✅ **Modern UI/UX** with smooth animations
+- ✅ **Responsive Design** (Mobile, Tablet, Desktop)
+- ✅ Fast processing using browser memory
+- ✅ Open-source & beginner-friendly
+
+---
 
 ## 🚀 Features
 
-*   **Merge PDF**: Combine multiple PDF files into one.
-*   **Split PDF**: Extract specific pages or ranges from a PDF.
-*   **Compress PDF**: Optimize PDF file size.
-*   **JPG to PDF**: Convert images to PDF documents.
-*   **PDF to JPG**: Extract pages as ID images.
-*   **Rotate PDF**: Rotate pages permanently.
-*   **Unlock/Protect PDF**: Encrypt documents with passwords.
-*   **Page Numbers**: Add page numbering to documents.
+- **Merge PDF** – Combine multiple PDFs into one
+- **Split PDF** – Extract specific pages or ranges
+- **Compress PDF** – Reduce file size efficiently
+- **JPG → PDF** – Convert images to PDF
+- **PDF → JPG** – Export pages as images
+- **Rotate PDF** – Rotate pages permanently
+- **Protect / Unlock PDF** – Add or remove passwords
+- **Page Numbers** – Insert page numbering
+
+---
+
+## 🎨 UI / UX & Animations
+
+- 🎯 Modern color palette with good contrast
+- 🎞️ Smooth CSS animations & transitions
+- 🧭 Clean tool-based navigation
+- 💡 Icon-based UI using IonIcons
+- 📱 Fully responsive layout using Flexbox & Grid
+
+---
 
 ## 🛠 Tech Stack
 
-*   **Frontend**: HTML5, CSS3 (Custom Properties, Flexbox/Grid)
-*   **Logic**: Vanilla JavaScript (ES6+)
-*   **Libraries**:
-    *   `pdf-lib`: For PDF modification (Merge, Split, Rotate, etc.)
-    *   `pdfjs-dist`: For rendering PDF pages (PDF to JPG)
-    *   `jsPDF`: For creating PDFs from images
-    *   `JSZip`: For bundling downloaded images
-    *   `IonIcons`: For UI icons
+### Frontend
+- **HTML5**
+- **CSS3**
+  - CSS Variables
+  - Flexbox & Grid
+  - Transitions & Animations
+- **Vanilla JavaScript (ES6+)**
+
+### Libraries Used
+- `pdf-lib` – PDF manipulation (merge, split, rotate, protect)
+- `pdfjs-dist` – Rendering PDFs (PDF → JPG)
+- `jsPDF` – Creating PDFs from images
+- `JSZip` – Zipping multiple image downloads
+- `IonIcons` – Modern UI icons
+
+---
 
 ## 📦 Installation & Usage
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/yourusername/pdfbazi.git
-    ```
-2.  **Open the project**:
-    Simply open `index.html` in your web browser. No build step or server required!
-
-3.  **Deploy**:
-    This project is static and ready for deployment on:
-    *   Netlify (Drag & drop the folder)
-    *   Vercel
-    *   GitHub Pages
-
-## 🔒 Privacy
-
-All operations are performed **Client-Side** in your browser. Your files are never uploaded to any server, ensuring 100% privacy and security.
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/gkm563/PDFBAZI.git
