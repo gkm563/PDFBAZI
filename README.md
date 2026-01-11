@@ -9,7 +9,7 @@ It allows users to **merge, split, compress, convert, and secure PDF files direc
 
 ## 🌐 Live Demo
 
-- 🔗 **Production (Netlify)**: https://pdfbazi.net  
+- 🔗 **Production (Netlify)**: https://pdfbazi.netlify.app/ 
 - 🔗 **GitHub Pages**: https://gkm563.github.io/PDFBAZI/
 
 ---
